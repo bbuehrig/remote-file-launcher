@@ -1,0 +1,15 @@
+{
+    "routes": [{
+        "name": "Ant",
+        "filepath":  "/S1-Tracks/Ant/Ant.song",
+        "urlpath": "ant"
+    },  {
+        "name": "Don't Look Back",
+        "filepath":  "/S1-Tracks/Dont Look Back/Dont Look Back.song",
+        "urlpath": "dontlookback"
+    },  {
+        "name": "Fix",
+        "filepath":  "/S1-Tracks/Fix/Fix.song",
+        "urlpath": "fix"
+    }]
+}

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #000;
+                color: #fff;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+            h1 {
+                text-align: center;
+            }
+            div.container{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: stretch;
+            }
+            div.item {
+                background-color: #880000;
+                color: #fff;
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                border-radius: 15px;
+                margin: 20px;
+                flex-grow: 1;
+            }
+        </style>
+        <title>
+            File-Opener
+        </title>
+    </head>
+    <body>
+        <h1>Tachycardia - Song-Loader</h1>
+
+        <div class="container">
+            {{range .Routes}}
+                <div class="item" onClick="openFile('{{.URLPath}}')">{{.Name }}</div>
+            {{else}}
+                <div><strong>no rows</strong></div>
+            {{end}}
+        </div>
+    </body>
+
+    <script>
+        function openFile(urlPath) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "/open/" + urlPath, true);
+            xhttp.send(); 
+        }
+    </script>
+</html>
